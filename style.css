@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    font-family: Raleway, sans-serif;
+    text-align: center;
+}
+
+/* Button --------------- */
+.button {
+    display:inline-block;
+    font-size:1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 1.5px;
+    border-style: solid;
+    padding:0.5em 0.75em;
+}
+
+.button-accent{
+    color:rgb(70, 189, 100);
+    border-color: rgb(70, 189, 100);
+}
+
+.button-accent:hover,
+.button-accent:focus{
+    background:rgb(70, 189, 100);
+    color:rgb(3, 58, 3)
+}
+
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* Typography -------------- */
+.title{
+    font-size:2rem;
+}
+
+.title span{
+    font-weight:300;
+    display: block;
+    font-size: 0.9em;
+}
+
+/* Header --------------------------- */
+header {
+    position: absolute;
+    margin-top: 1em;
+    left: 0;
+    right: 0;
+}
+
+.logo {
+    padding: 0.5em;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 1em;
+}
+
+nav a {
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5em;
+    color: #FFF
+}
+
+nav a:hover,
+nav a:focus {
+    color: rgb(221, 241, 193);
+}
+
+/* home-hero --------------------------- */
+
+.home-hero {
+    background-image: url(img/hero-bg.jpg);
+    padding: 10em 0;
+    color:rgb(221, 241, 193);
+}
+
+
+
+
+
