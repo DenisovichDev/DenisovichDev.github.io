@@ -17,25 +17,39 @@ body {
 
 /* Button --------------- */
 .button {
-    display:inline-block;
-    font-size:1.2rem;
+    display: inline-block;
+    font-size: 1.2rem;
     text-decoration: none;
     text-transform: uppercase;
     border-width: 1.5px;
     border-style: solid;
-    padding:0.5em 0.75em;
-    margin-top:1em;
+    padding: 0.5em 0.75em;
+    margin-top: 0.5em;
 }
 
-.button-accent{
-    color:rgb(70, 189, 100);
+.button-accent {
+    color: rgb(70, 189, 100);
     border-color: rgb(70, 189, 100);
 }
 
 .button-accent:hover,
-.button-accent:focus{
-    background:rgb(70, 189, 100);
-    color:rgb(3, 58, 3)
+.button-accent:focus {
+    background: rgb(70, 189, 100);
+    color: rgb(3, 58, 3)
+}
+
+@media (min-width:50rem) {
+    .button {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width:30rem) and (min-height:45rem) {
+
+    /* Mobile devices*/
+    .button {
+        margin-top: 4em;
+    }
 }
 
 
@@ -45,19 +59,29 @@ body {
 }
 
 /* Typography -------------- */
-.title{
-    font-size:2rem;
+
+h1 {
+    font-weight: 300;
+    font-size:2em;
+    margin-top:0;
 }
 
-.title span{
-    font-weight:300;
+
+.title {
+    font-size: 2rem;
+    font-weight:700;
+    margin-top:1em;
+}
+
+.title span {
+    font-weight: 300;
     display: block;
     font-size: 0.9em;
 }
 
-@media (min-width:50rem){
-    .title{
-        font-size:3.5rem;
+@media (min-width:50rem) {
+    .title {
+        font-size: 3.5rem;
     }
 }
 
@@ -97,12 +121,12 @@ nav a:focus {
     color: rgb(221, 241, 193);
 }
 
-@media (min-width:55rem){
-    nav{
+@media (min-width:55rem) {
+    nav {
         float: right;
     }
 
-    .logo{
+    .logo {
         float: left;
     }
 }
@@ -112,37 +136,71 @@ nav a:focus {
 .home-hero {
     background-image: url(img/hero-bg.png);
     padding: 10em 0;
-    color:rgb(221, 241, 193);
+    color: rgb(221, 241, 193);
     background-size: cover;
     background-position: center;
 }
 
-@media (min-width:55rem) and (min-height:30rem){
-    .home-hero{
+@media (min-width:55rem) and (min-height:30rem) {
+    .home-hero {
         height: 100vh;
-        padding-top: 35vh;
+        padding-top: 30vh;
     }
 }
 
-@media (max-width:30rem) and (min-height:45rem){
-    .home-hero{
+@media (max-width:30rem) and (min-height:45rem) {
+
+    /* Mobile devices*/
+    .home-hero {
         height: 100vh;
         padding-top: 35vh;
     }
-    .button{
+
+    .button {
         margin-top: 4em;
     }
 }
 
-/* Home about ----------------------- */
-
-.home-about {
-    margin:1em;
+/* Home-about --------- */
+.home-about-textbox{
+    background:#232323;
+    padding:3em;
+    width:100vw;
+    margin-left:-2.6%;
+    outline:2px solid rgb(159, 228, 128);
+    outline-offset: -2em;
+    color:#FFF;
+    position:relative;
 }
 
-.home-about{
-    /* margin-right:40em; */
-    padding:0.75em;
-    background:pink;
+.home-about-textbox h1 {
+    color:rgb(159, 228, 128);
+    text-transform: uppercase;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:0.37em;
+    background:#232323;
+    padding:0 0.2em;
+    margin-bottom:0;
 }
 
+@media (min-width:57rem){
+    .home-about{
+        padding:5em;
+        background-image: 
+        url(img/who-we-are.jpg);
+        background-repeat: no-repeat;
+    }
+    .home-about-textbox h1{
+        top:1.14em;
+        padding:0 0.3em;
+    }
+    .home-about-textbox{
+        margin-left:-2.6%;
+        width:53%;
+        padding:6em;
+        outline-offset: -3.5em;
+        box-shadow: 0 0 3em 0 rgba(0, 0, 0, 1);
+    }
+}
