@@ -24,6 +24,7 @@ body {
     border-width: 1.5px;
     border-style: solid;
     padding:0.5em 0.75em;
+    margin-top:1em;
 }
 
 .button-accent{
@@ -54,10 +55,16 @@ body {
     font-size: 0.9em;
 }
 
+@media (min-width:50rem){
+    .title{
+        font-size:3.5rem;
+    }
+}
+
 /* Header --------------------------- */
 header {
     position: absolute;
-    margin-top: 1em;
+    margin: 1em;
     left: 0;
     right: 0;
 }
@@ -90,15 +97,52 @@ nav a:focus {
     color: rgb(221, 241, 193);
 }
 
+@media (min-width:55rem){
+    nav{
+        float: right;
+    }
+
+    .logo{
+        float: left;
+    }
+}
+
 /* home-hero --------------------------- */
 
 .home-hero {
-    background-image: url(img/hero-bg.jpg);
+    background-image: url(img/hero-bg.png);
     padding: 10em 0;
     color:rgb(221, 241, 193);
+    background-size: cover;
+    background-position: center;
 }
 
+@media (min-width:55rem) and (min-height:30rem){
+    .home-hero{
+        height: 100vh;
+        padding-top: 35vh;
+    }
+}
 
+@media (max-width:30rem) and (min-height:45rem){
+    .home-hero{
+        height: 100vh;
+        padding-top: 35vh;
+    }
+    .button{
+        margin-top: 4em;
+    }
+}
 
+/* Home about ----------------------- */
 
+.home-about {
+    margin:1em;
+}
+
+.home-about{
+    /* margin-right:40em; */
+    padding:0.75em;
+    background:pink;
+}
 
