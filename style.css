@@ -1,7 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap');
 
+/* Custom properties */
+:root {
+    --base: #0b142c;
+    --base-light: #373d5a;
+    --base-lighter: #747687;
+
+    --light-comp: #d2a517;
+    --light-comp-varient: #e79b25;
+    --dark-comp: #574504;
+    --mellow: #ffeeca;
+}
+
 * {
     box-sizing: border-box;
+    transition: all ease-in-out 250ms;
 }
 
 img {
@@ -15,7 +28,10 @@ body {
     text-align: center;
 }
 
+
+
 /* Button --------------- */
+
 .button {
     display: inline-block;
     font-size: 1.2rem;
@@ -27,20 +43,9 @@ body {
     margin-top: 0.5em;
 }
 
-.button-accent {
-    color: rgb(70, 189, 100);
-    border-color: rgb(70, 189, 100);
-}
-
-.button-accent:hover,
-.button-accent:focus {
-    background: rgb(70, 189, 100);
-    color: rgb(3, 58, 3)
-}
-
 @media (min-width:50rem) {
     .button {
-        font-size: 1.6em;
+        font-size: 1.6rem;
     }
 }
 
@@ -52,11 +57,36 @@ body {
     }
 }
 
+.button-small {
+    font-size: 0.6rem;
+    font-weight: 700;
+    margin-top: 0.5em;
+}
+
+@media(min-width:38rem) {
+    .button-small {
+        font-size: 0.8rem;
+    }
+}
+
+.button-accent {
+    color: var(--light-comp);
+    border-color: var(--light-comp);
+}
+
+.button-accent:hover,
+.button-accent:focus {
+    background: var(--light-comp);
+    color: var(--dark-comp);
+}
+
 
 .container {
     width: 95%;
     margin: 0 auto;
 }
+
+
 
 /* Typography -------------- */
 
@@ -65,16 +95,22 @@ h1 {
     font-size: 2em;
     margin-top: 0;
 }
+
 p {
     margin-top: 0;
     line-height: 1.5;
 }
+
 p:first-of-type {
     margin-top: 0.5em;
 }
 
 p:last-of-type {
     margin-bottom: 0;
+}
+
+.port-desc p {
+    font-weight:700;
 }
 
 .title {
@@ -90,15 +126,17 @@ p:last-of-type {
 }
 
 @media (min-width:50rem) {
-    p{
-        font-size:1.2rem;
-        line-height:1.7;
+    p {
+        font-size: 1.2rem;
+        line-height: 1.7;
     }
 
     .title {
         font-size: 3.5rem;
     }
 }
+
+
 
 /* Header --------------------------- */
 header {
@@ -133,7 +171,7 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-    color: rgb(221, 241, 193);
+    color: var(--mellow);
 }
 
 @media (min-width:55rem) {
@@ -151,7 +189,7 @@ nav a:focus {
 .home-hero {
     background-image: url(img/hero-bg.png);
     padding: 10em 0;
-    color: rgb(221, 241, 193);
+    color: var(--mellow);
     background-size: cover;
     background-position: center;
 }
@@ -169,33 +207,37 @@ nav a:focus {
     .home-hero {
         height: 100vh;
         padding-top: 35vh;
+        /* background-image: url(img/hero-bg-rotated.png); */
+        /* backface-visibility: var(--base); */
+        background: var(--base);
+        background: linear-gradient(180deg,
+                var(--base) 0%,
+                var(--base-light) 70%,
+                var(--base-lighter) 120%);
     }
 
-    .button {
-        margin-top: 4em;
-    }
 }
 
 /* Home-about --------- */
 .home-about-textbox {
-    background: #232323;
+    background: var(--base);
     padding: 3em;
     width: 100vw;
     margin-left: -2.6%;
-    outline: 2px solid rgb(159, 228, 128);
+    outline: 2px solid var(--light-comp-varient);
     outline-offset: -2em;
     color: #FFF;
     position: relative;
 }
 
 .home-about-textbox h1 {
-    color: rgb(159, 228, 128);
+    color: var(--light-comp-varient);
     text-transform: uppercase;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 0.37em;
-    background: #232323;
+    background: var(--base);
     padding: 0 0.2em;
 }
 
@@ -204,7 +246,7 @@ nav a:focus {
         padding: 5em;
         padding-bottom: 10em;
         background-image:
-            url(img/about-me-bg.jpg);
+            url(img/about-me-bg-2.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -225,6 +267,55 @@ nav a:focus {
 }
 
 /* portfolio --------------------*/
-.portfolio h1{
-    margin-top: 1em;
+
+.portfolio {
+    margin: 3em 0;
+}
+
+.port-item {
+    margin: 0;
+    position: relative;
+}
+
+.port-item img {
+    display: block;
+}
+
+.port-desc {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--mellow);
+    padding-bottom: 1em;
+}
+
+@media (min-width:38rem) {
+    .port-item {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width:55rem) {
+    .port-item {
+        width: 33.3333334%;
+        overflow: hidden;
+    }
+
+    .port-desc {
+        transform: translateY(170%);
+    }
+
+    .port-item:hover .port-desc {
+        transform: translateY(0%);
+    }
+
+    .port-item:hover img {
+        /* Add the blur effect */
+        filter: blur(0.8rem);
+        -webkit-filter: blur(0.8rem);
+    }
 }
