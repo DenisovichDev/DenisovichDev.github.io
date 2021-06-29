@@ -12,7 +12,8 @@
     --mellow: #ffeeca;
 
     --gradient: linear-gradient(
-                30deg,
+                140deg,
+                #0b142c,
                 #0b142c,
                 #4e2e54,
                 #9a4967,
@@ -33,7 +34,6 @@ body {
     margin: 0;
     font-family: Raleway, sans-serif;
     text-align: center;
-    transition: scroll 250 ease-out;
 }
 
 
@@ -207,7 +207,6 @@ nav a:focus {
     color: var(--mellow);
     background-size: cover;
     background-position: center;
-    background-attachment:fixed;
 }
 
 @media (min-width:55rem) and (min-height:30rem) {
