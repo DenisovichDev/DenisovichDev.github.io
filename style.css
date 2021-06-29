@@ -10,11 +10,18 @@
     --light-comp-varient: #e79b25;
     --dark-comp: #574504;
     --mellow: #ffeeca;
+
+    --gradient: linear-gradient(
+                30deg,
+                #0b142c,
+                #4e2e54,
+                #9a4967,
+                #da7365
+                )
 }
 
 * {
     box-sizing: border-box;
-    transition: all ease-in-out 250ms;
 }
 
 img {
@@ -26,6 +33,7 @@ body {
     margin: 0;
     font-family: Raleway, sans-serif;
     text-align: center;
+    transition: scroll 250 ease-out;
 }
 
 
@@ -41,6 +49,8 @@ body {
     border-style: solid;
     padding: 0.5em 0.75em;
     margin-top: 0.5em;
+    transition: background 200ms ease-in-out,
+                color 200ms ease-in-out;
 }
 
 @media (min-width:50rem) {
@@ -85,7 +95,6 @@ body {
     width: 95%;
     margin: 0 auto;
 }
-
 
 
 /* Typography -------------- */
@@ -148,11 +157,10 @@ header {
 
 .logo {
     padding: 0.5em;
-    transform: scale(0.8);
-
+    transition: transform 250ms ease-in-out;
+    transform: scale(0.8);  
 }
-.logo:hover,
-.logo:focus{
+.logo:hover{
     transform: scale(1);
 }
 
@@ -199,6 +207,7 @@ nav a:focus {
     color: var(--mellow);
     background-size: cover;
     background-position: center;
+    background-attachment:fixed;
 }
 
 @media (min-width:55rem) and (min-height:30rem) {
@@ -217,10 +226,27 @@ nav a:focus {
         /* background-image: url(img/hero-bg-rotated.png); */
         /* backface-visibility: var(--base); */
         background: var(--base);
-        background: linear-gradient(180deg,
-                var(--base) 0%,
-                var(--base-light) 70%,
-                var(--base-lighter) 120%);
+        /* background: linear-gradient(180deg, */
+                /* var(--base) 0%, */
+                /* var(--base-light) 70%, */
+                /* var(--base-lighter) 120%); */
+        background-image: var(--gradient);
+        background-size: 300%;
+        animation: bg-animation 10s infinite alternate;
+
+        
+
+
+        
+    }
+
+}
+@keyframes bg-animation  {
+    0%{
+        background-position:left;
+    }
+    100%{
+        background-position:right;
     }
 
 }
@@ -282,10 +308,12 @@ nav a:focus {
 .port-item {
     margin: 0;
     position: relative;
+    
 }
 
 .port-item img {
     display: block;
+    transition: filter 250ms ease-in-out;
 }
 
 .port-desc {
@@ -297,6 +325,7 @@ nav a:focus {
     background: rgba(0, 0, 0, 0.6);
     color: var(--mellow);
     padding-bottom: 1em;
+    transition: transform 250ms ease-in-out;
 }
 
 @media (min-width:38rem) {
