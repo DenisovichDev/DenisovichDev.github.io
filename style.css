@@ -222,21 +222,11 @@ nav a:focus {
     .home-hero {
         height: 100vh;
         padding-top: 35vh;
-        /* background-image: url(img/hero-bg-rotated.png); */
-        /* backface-visibility: var(--base); */
         background: var(--base);
-        /* background: linear-gradient(180deg, */
-                /* var(--base) 0%, */
-                /* var(--base-light) 70%, */
-                /* var(--base-lighter) 120%); */
         background-image: var(--gradient);
         background-size: 300%;
         animation: bg-animation 10s infinite alternate;
-
-        
-
-
-        
+       
     }
 
 }

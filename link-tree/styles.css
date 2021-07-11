@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap');
+
+:root {
+    --base: hsl(240, 61%, 24%);
+    --gradient: linear-gradient(140deg,
+            #0b142c,
+            #0b142c,
+            #4e2e54,
+            #9a4967,
+            #da7365)
+}
+
+* {
+    font-family: Montserrat, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1.5em;
+    padding-bottom: 0;
+    text-align: center;
+    height: 100vh;
+    font-size: 2rem;
+    background: var(--base);
+    background-image: var(--gradient);
+    background-size: 300%;
+    animation: bg-animation 10s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+
+}
+
+/* Typography */
+header>* {
+    color: #FFF;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 0.6em;
+}
+
+.bio {
+    font-weight: 100;
+    font-size: 0.5em;
+}
+
+li {
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+/* Header */
+.dp {
+    border-radius: 50%;
+    width: 4em;
+    aspect-ratio: 1/1;
+}
+
+header {
+    margin-bottom: 1.7em;
+}
+
+/* content */
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    padding: 0.2em;
+    display: flex;
+    margin: 1em 0;
+    text-align: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.icon {
+    padding: 0.3em;
+}
+
+.link-name {
+    padding: 0;
+    /* line-height: 1.6; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Button */
+
+.button {
+    color: pink;
+    transition: transform 250ms ease-in;
+    border: 2px solid pink;
+}
+
+.big-button {
+    transform: scale(1.1);
+    background: pink;
+    color: #000;
+}
+
+/* Footer */
+
+a {
+    font-size: 0.5em;
+    font-weight: 300;
+    padding: 0.2em 0.5em;
+    margin: 0.4em;
+    color: #FFF;
+    opacity: 50%;
+    text-decoration: none;
+    transition: opacity 250ms ease-in;
+}
+
+a:hover,
+a:focus {
+    opacity: 100%;
+}
