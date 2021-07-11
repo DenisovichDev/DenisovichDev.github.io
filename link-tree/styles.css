@@ -104,6 +104,7 @@ li {
     color: pink;
     transition: transform 250ms ease-in;
     border: 2px solid pink;
+    cursor: pointer;
 }
 
 .big-button {
