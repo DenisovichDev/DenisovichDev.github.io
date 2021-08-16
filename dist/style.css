@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap");
+:root {
+  --base: hsl(240, 61%, 24%);
+  --gradient: linear-gradient(
+        140deg,
+        #0b142c,
+        #0b142c,
+        #4e2e54,
+        #9a4967,
+        #da7365
+    );
+}
+
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+  font-size: 3em;
+  height: 100vh;
+  background: var(--base);
+  background-image: var(--gradient);
+  background-size: 300%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@-webkit-keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+body {
+  -webkit-animation: bg-animation 10s infinite alternate;
+          animation: bg-animation 10s infinite alternate;
+}
+
+h1 {
+  color: #ebdfab;
+  margin: 0 0 3rem;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #4a4a75;
+  font-weight: 400;
+  background-color: rgba(171, 171, 235, 0.7);
+  border-radius: 100vh;
+  padding: 0.5em 1em;
+}
+
+a:focus,
+a:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,50 @@
+:root {
+    --base: hsl(240, 61%, 24%);
+    --gradient: linear-gradient(
+        140deg,
+        #0b142c,
+        #0b142c,
+        #4e2e54,
+        #9a4967,
+        #da7365
+    );
+}
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+    font-size: 3em;
+    height: 100vh;
+    background: var(--base);
+    background-image: var(--gradient);
+    background-size: 300%;
+}
+
+.flex {
+    display: flex;
+
+    &-fd-c {
+        flex-direction: column;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}

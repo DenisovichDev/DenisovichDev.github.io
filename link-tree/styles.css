@@ -73,13 +73,14 @@ header {
 /* content */
 ul {
     padding: 0;
+    text-align: center;
 }
 
 li {
     list-style: none;
     padding: 0.2em;
     display: flex;
-    margin: 1em 0;
+    margin: 1em auto;
     text-align: center;
     justify-content: flex-start;
     position: relative;
@@ -105,6 +106,7 @@ li {
     transition: transform 250ms ease-in;
     border: 2px solid pink;
     cursor: pointer;
+    max-width: 600px;
 }
 
 .big-button {
