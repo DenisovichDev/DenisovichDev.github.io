@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap");
 
 :root {
     --base: hsl(240, 61%, 24%);
-    --gradient: linear-gradient(140deg,
-            #0b142c,
-            #0b142c,
-            #4e2e54,
-            #9a4967,
-            #da7365)
+    --gradient: linear-gradient(
+        140deg,
+        #0b142c,
+        #0b142c,
+        #4e2e54,
+        #9a4967,
+        #da7365
+    );
 }
 
 * {
@@ -20,7 +22,7 @@ body {
     padding: 1.5em;
     padding-bottom: 0;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     font-size: 2rem;
     background: var(--base);
     background-image: var(--gradient);
@@ -36,12 +38,11 @@ body {
     100% {
         background-position: right;
     }
-
 }
 
 /* Typography */
-header>* {
-    color: #FFF;
+header > * {
+    color: #fff;
 }
 
 h1 {
@@ -122,7 +123,7 @@ a {
     font-weight: 300;
     padding: 0.2em 0.5em;
     margin: 0.4em;
-    color: #FFF;
+    color: #fff;
     opacity: 50%;
     text-decoration: none;
     transition: opacity 250ms ease-in;
