@@ -26,8 +26,8 @@ body {
     font-size: 2rem;
     background: var(--base);
     background-image: var(--gradient);
-    background-size: 300%;
-    animation: bg-animation 10s infinite alternate;
+    background-size: 500%;
+    animation: bg-animation 20s infinite alternate;
 }
 
 @keyframes bg-animation {
