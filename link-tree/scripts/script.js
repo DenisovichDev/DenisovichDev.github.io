@@ -4,6 +4,7 @@ const links = [
     "https://twitter.com/DenisovichPy",
     "https://github.com/DenisovichDev",
     "https://www.fxhash.xyz/u/Denisovich",
+    "https://genart.social/@denisovich",
     "mailto:little.denisovich@gmail.com",
 ]
 
